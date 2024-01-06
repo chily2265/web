@@ -65,6 +65,7 @@ export default function Header() {
       className={`z-1000 ${classes.header}`}
       maw='100%'
     >
+      
       <Link href={link}>
         {/* //underline='never' */}
         <Group wrap='nowrap'>
@@ -76,6 +77,7 @@ export default function Header() {
             h='2.5rem'
             fit='fill'
           ></Image>
+
           <Text
             size='1rem'
             fw='900'
@@ -86,6 +88,43 @@ export default function Header() {
           </Text>
         </Group>
       </Link>
+      <Flex gap='2rem' align='center'>
+          {/* <LanguagePicker /> */}
+          
+          <Link
+            href={link}
+            onClick={() => {
+              queryClient.clear();
+            }}
+          >
+            Trang chủ 
+          </Link>
+          
+          <Link
+            href='/about'
+            onClick={() => {
+              queryClient.clear();
+            }}
+          >
+            Giới thiệu
+          </Link>
+          <Link
+            href='#'
+            onClick={() => {
+              queryClient.clear();
+            }}
+          >
+            Sản phẩm
+          </Link>
+          <Link
+            href='/sign-up'
+            onClick={() => {
+              queryClient.clear();
+            }}
+          >
+            Liên hệ
+          </Link>
+        </Flex>
       {((user.userId &&
         user?.roles[0] != 'manager' &&
         user?.roles[0] != 'staff') ||
@@ -96,6 +135,7 @@ export default function Header() {
       ) : (
         <Flex gap='1rem' align='center'>
           {/* <LanguagePicker /> */}
+          
           <Link
             href='/sign-in'
             onClick={() => {

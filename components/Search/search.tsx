@@ -53,7 +53,7 @@ export default function Search({ content }: SearchText) {
   };
   return (
     <TextInput
-      w='37.5rem'
+      w='15.5rem'
       rightSection={
         <ActionIcon
           bg={'transparent'}
