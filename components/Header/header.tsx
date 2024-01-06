@@ -31,7 +31,7 @@ import UserContext from '@/contexts/UserContext';
 // }
 
 export default function Header() {
-  const appName = 'Material Mastery';
+  const appName = 'Shoes';
   const { user, setUser } = useContext(UserContext);
   const [link, setLink] = useState('/');
   const setLinkBaseRole = (role: string = 'customer', setLink: any) => {
@@ -73,13 +73,13 @@ export default function Header() {
             component={NextImage}
             src={logo}
             alt='Logo'
-            w='2.5rem'
+            w='10rem'
             h='2.5rem'
             fit='fill'
           ></Image>
 
           <Text
-            size='1rem'
+            size='2rem'
             fw='900'
             c='turquoise.6'
             lh='1.1875rem'
