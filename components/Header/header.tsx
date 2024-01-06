@@ -117,7 +117,7 @@ export default function Header() {
             Sản phẩm
           </Link>
           <Link
-            href='/sign-up'
+            href='/contact'
             onClick={() => {
               queryClient.clear();
             }}
